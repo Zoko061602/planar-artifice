@@ -30,9 +30,8 @@ public class PABlocks {
 	public static final Block smelter_aux = new BlockAlkimiumSmelteryAux("smelter_aux").setCreativeTab(PlanarArtifice.creativetab);
 	public static final Block smelter_vent = new BlockAlkimiumSmelteryVent("smelter_vent").setCreativeTab(PlanarArtifice.creativetab);
 
-	public static final Block teleporter = new BlockTeleporterMiddle("teleporter");
-	public static final Block teleporter_matrix = new BlockPA(Material.ROCK,"teleporter_matrix").setCreativeTab(PlanarArtifice.creativetab).setHardness(3);
-	public static final Block teleporter_placeholder = new BlockTeleporterPlaceholder("teleporter_placeholder");
+	public static final Block teleporter = new BlockTeleporter("teleporter");
+	public static final Block teleporter_matrix = new BlockPA(Material.ROCK, "teleporter_matrix").setCreativeTab(PlanarArtifice.creativetab).setHardness(3);
 	
 	public static final Block potion_mixer = new BlockPotionMixer("potion_mixer");// .setCreativeTab(PlanarArtifice.creativetab);;
 	public static final Block flux_scrubber = new BlockFluxScrubber("flux_scrubber").setHardness(3).setHardness(3).setCreativeTab(PlanarArtifice.creativetab);;

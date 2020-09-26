@@ -16,10 +16,10 @@ public class PAMultiblocks{
 
 	public static void registerMultiblocks() {
 		//To name a Part, put where it is + what it turns into.
-		Part BP = new Part(BlocksTC.stoneArcaneBrick, new ItemStack(PABlocks.teleporter_placeholder));
-		Part MT = new Part(BlocksTC.stoneArcaneBrick, new ItemStack(PABlocks.teleporter));
-		Part TP = new Part(PABlocks.teleporter_matrix, new ItemStack(PABlocks.teleporter_placeholder));
-		mirromerous_teleporter = new BluePrint("MIRRORTELEPORTER", new Part[][][] {{{TP}}, {{MT}}, {{BP}}}, new ItemStack[]{new ItemStack(PABlocks.teleporter_matrix), new ItemStack(BlocksTC.stoneArcaneBrick, 2)});
+		Part top = new Part(PABlocks.teleporter_matrix, new ItemStack(PABlocks.teleporter,1,0));
+		Part middle = new Part(BlocksTC.stoneArcaneBrick, new ItemStack(PABlocks.teleporter,1,1));
+		Part bottom = new Part(BlocksTC.stoneArcaneBrick, new ItemStack(PABlocks.teleporter,1,2));
+		mirromerous_teleporter = new BluePrint("MIRRORTELEPORTER", new Part[][][] {{{top}}, {{middle}}, {{bottom}}}, new ItemStack(PABlocks.teleporter_matrix), new ItemStack(BlocksTC.stoneArcaneBrick, 2));
 		IDustTrigger.registerDustTrigger(new DustTriggerMultiblock("MIRRORTELEPORTER", mirromerous_teleporter.getParts()));
 		ThaumcraftApi.addMultiblockRecipeToCatalog(new ResourceLocation("planarartifice:mirror_teleporter"), mirromerous_teleporter);
 
